@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import CartWidget from '../CartWidget/CartWidget'
+
+
 
 
 
@@ -27,6 +30,7 @@ export default class NavbarComp extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+                <CartWidget />
             </div >
         )
     }
