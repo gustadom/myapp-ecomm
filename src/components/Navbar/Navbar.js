@@ -1,37 +1,28 @@
-import React, { Component } from 'react'
-import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import React from 'react'
+import { Container, Nav } from 'react-bootstrap'
 import CartWidget from '../CartWidget/CartWidget'
 
-
-
-
-
-
-export default class NavbarComp extends Component {
-    render() {
-        return (
-            <div>
-                <Navbar bg="dark" variant={"dark"} expand="lg">
-                    <Container>
-                        <Navbar.Brand href="#home">MrBeer</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto">
-                                <Nav.Link href="#home">Productos</Nav.Link>
-                                <Nav.Link href="#link">Carrito</Nav.Link>
-                                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-                <CartWidget />
-            </div >
-        )
-    }
+const Navbar = () => {
+    return (
+        <div>
+            <Navbar bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">Mr.BEER</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#Productos">Productos</Nav.Link>
+                        <Nav.Link href="#Contacto">Contacto</Nav.Link>
+                    </Nav>
+                    <CartWidget />
+                </Container>
+            </Navbar>
+        </div>
+    )
 }
+
+export default Navbar;
+
+
+
+
+
